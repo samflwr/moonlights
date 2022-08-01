@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Moonlights</title>
+  <meta name="description" content="xvmir is a Web developer, programmer and designer. This is his portfolio." />
+  <meta name="keywords" content="Moonlights, xvmir, moonlights, moonlight, website, logo design, logo designer, free website templates, web design company, website creator, design logo, website designer, responsive web design, create website, criar site, graphic design, website design, website builder, website templates, web development, graphic designer, web page, brochure design, web designer, webdesign, web developer, ecommerce website, create a website, xvmir, Designer, WebDeveloper, Samir Buzatu, Moonlights, Programmer">
+  <link href="https://fonts.googleapis.com/css?family=Trocchi|Anton" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="author" content="Samir Buzatu">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div :class="['bg', bg]">
+    <header>
+      <nav>
+        <ul>
+          <li><a class="link-bio" href="#bio" @click="bg = 'bio'">Bio</a></li>
+          <li><a class="link-projects" href="#projects" @click="bg = 'projects'">Xvmir</a></li>
+          <li><a class="link-find-me" href="#findme" @click="bg = 'find-me'">Find Me</a></li>
+        </ul>
+      </nav>
+      <div class="transition transition-bio"></div>
+      <div class="transition transition-projects"></div>
+      <div class="transition transition-find-me"></div>
+      <h1>Moon</h1>
+    </header>
+    <div class="dots dots1"></div>
+    <div class="dots dots2"></div>
+    <main>
+      <transition name="slide-fade" mode="out-in">
+        <p key="bio" v-if="bg==='bio'">work in progress.</p>
+        <p key="projects" v-if="bg==='projects'">my name is samir buzatu (xvmir) and i’m a digital crafter.
+          wherever and with whomever i’m working, i let the needs of a project dictate its style.
+          i try not to think my way into a design, quality is always my priority but i
+          believe you have to let play drive you.
+          <br></br>
+          i am a continuous learner. learning for me equates to exploring
+          new ideas and growing as an individual. i just cannot imagine my life devoid of designing.
+          i freely express my creativity and imagination by designing.
+          <br></br>
+          easy is boring. if you aren’t having fun pushing yourself, you aren’t doing it right.
+        </p>
+        <p key="find-me" v-if="bg==='find-me'">See <a href="https://xvmir.com" target="_blank" rel="noopener">xvmir.com</a></p>
+      </transition>
+    </main>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
